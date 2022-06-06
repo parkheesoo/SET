@@ -1,0 +1,98 @@
+CREATE USER planer WITH PASSWORD '2580' CREATEDB CREATEROLE CREATEUSER;
+
+CREATE TABLE plan(
+   dept		VARCHAR(10)	NOT NULL,	---학과
+   name		VARCHAR(30)	NOT NULL,	---강의명
+   professor	VARCHAR(20)	NOT NULL,	---교수명
+   book		VARCHAR(60)	NOT NULL,	---교재명
+   hakjum	VARCHAR(2)	NOT NULL,	---학점
+   esu		VARCHAR(5)	NULL,		---이수구분
+   infor		VARCHAR(1000)	NULL,		---강의정보 
+   CONSTRAINT pk_plan PRIMARY KEY(name)
+);
+
+INSERT INTO plan(dept, name, professor, book, hakjum,esu,infor) VALUES(
+'정보통신융합공학부',
+'객체지향프로그래밍2',
+'조도은',
+'명품java programming (개정4판), 처음시작하는 JAVA 프로그래밍',
+'2',
+'전선',
+'현재 많은 IT분야에서 이용되고 있는 대표적 객체지향 프로그래밍 언어인 자바에 대해 학습하고, 실습을 통해 자바 프로그래밍 능력을 갖춘다. 
+자바의 기본 문법과 객체, 클래스, 클래스 라이브러리, 예외처리, 다중 쓰레드 등을 이해하며 GUI 프로그래밍에 대해 학습한다. 
+이로써 자바 어플리케이션뿐만 아니라, 웹 프로그래밍, 안드로이드 모바일 프로그래밍 등 학습의 토대를 마련한다. ');
+
+INSERT INTO plan(dept, name, professor, book, hakjum,esu) VALUES(
+'정보통신융합공학부',
+'융합디지털미디어',
+'정윤수',
+'컴퓨터 사고력을 키우는 sw교육:스크래치, 대학생을 위한 스크래치 프로그래밍',
+'3',
+'전선');
+
+INSERT INTO plan(dept, name, professor, book, hakjum,esu,infor) VALUES(
+'정보통신융합공학부',
+'데이터베이스',
+'민병원',
+'introduction to database:postgresql',
+'2',
+'전필',
+'-. 대용량의 데이터를 효율적이고 편리하게 관리하는 데이터베이스 시스템의 정의와 개념 이해
+-. 데이터베이스 시스템의 내부 기능과 동작 원리를 이해
+-. 데이터베이스 관리 시스템 이해
+-. 데이터베이스와 응용의 설계, 이용, 구현에 대해 학습하고 데이터베이스 설계 및 데이터베이스 프로그래밍 능력을 배양함으로써 데이터베이스 시스템의 활용 능력을 배양
+-. 데이터 모델과 정규형의 이해를 통한 데이터베이스 설계 능력 향상
+-. DBMS 구조와 SQL 언어를 활용하여 데이터베이스를 관리하고, 응용 프로그램을 개발하는 방법 익힘
+-. 오픈소스 데이터베이스는 PostgreSQL를 사용하여 SQL 활용 능력 향상');
+
+INSERT INTO plan(dept, name, professor, book, hakjum,esu,infor) VALUES(
+'정보통신융합공학부',
+'컴퓨터기초설계',
+'조용희',
+'따라 하면서 배우는 아두이노',
+'3',
+'전필',
+'컴퓨터 장치의 핵심 요소인 CPU의 동작 원리를 이해하고 CPU 중심의 프로그래밍 기법을 아두이노를 이용해 연습한다. 
+이를 위해 디지털공학 내용을 복습하고 CPU의 전형적인 구조를 배우고, 메모리/입출력/주변장치의 연결 구조, 멀티프로세싱의 개념을 학습하여, CPU 기반 컴퓨터 하드웨어의 동작을 이해하는데 필요한 기초적인 지식을 습득한다. 
+아두이노 실습을 통해 CPU 프로그램을 다루는 기법 전반을 공부하고 연습한다. ');
+
+INSERT INTO plan(dept, name, professor, book, hakjum,esu,infor) VALUES(
+'정보통신융합공학부',
+'이산수학',
+'박덕규',
+'이산수학 express',
+'3',
+'공기',
+'이산 수학은 연속적인 개념을 사용하지 않고 이산적인 수학 구조에 연구하는 학문으로, 주로 집합, 정수, 관계, 그래프, 형식 언어와 같은 개념을 다루는 학문이다.
+ 즉 이산적인 대상물들을 분석하여 응용의 기반을 삼는 학문이다.
+ 특히 과학기술과 공학분야의 기초와 응용을 위해 매우 중요한 역할을 담당하는 분야이며, 복잡한 문제들을 추상화하여 논리적으로 엄밀하게 판단하고 정확한 방법을 모델링하는 것을 목적으로 한다.
+ 특히 자료구조, 알고리즘, 운영체제등을 포함한 많은 전산분야의 수학적 바탕을 확립할 수 있는 기반을 제공한다.  ');
+
+INSERT INTO plan(dept, name, professor, book, hakjum,esu,infor) VALUES(
+'정보통신융합공학부',
+'확률및 통계',
+'연용호',
+'통계학 입문, 공학도를 위한 확률 통계',
+'3',
+'공기',
+'보의 홍수속에서 유용한 정보를 추출하고 활용하는 일은 매우 중요하다. 
+이를 담당하는 학문이 확률과 통계이며 자연과학 뿐만 아니라 인문, 사회과학, 이약학, 농학 및 공학 분야에 이르기 까지 널리 이용되고 있다. 
+따라서 확률과 통계에 대한 어느 정도의 기초 지식은 필수 불가결하게 되었다. 
+통계기법을 활용하여 제품성능을 개선하고 연구결과에 대한 검증을 하는 것도 일반적인 일이 되었다. 
+이 수업을 통해 확률과 통계에 대한 기초지식 습득과 엑셀을 이용하여 통계수치를 해석하는 능력을 향상시키고자 한다.');
+
+INSERT INTO plan(dept, name, professor, book, hakjum) VALUES(
+'정보통신융합공학부',
+'미래설계및상담4',
+'이상욱',
+'교재가 없습니다',
+'0');
+
+INSERT INTO plan(dept, name, professor, book, hakjum) VALUES(
+'-',
+'채플',
+'김칠성',
+'교재가 없습니다',
+'0');
+
+COMMIT;
